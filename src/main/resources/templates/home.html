@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" th:fragment="page">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Thymeleaf Layout</title>
+    <!-- BOOTSTRAP STYLES-->
+    <link href="bootstrap-3.3.6-dist/css/bootstrap.css" rel="stylesheet"/>
+    <!-- FONTAWESOME STYLES-->
+    <link href="font-awesome-4.5.0/css/font-awesome.css" rel="stylesheet"/>
+    <!-- CUSTOM STYLES-->
+    <link href="panel/css/custom.css" rel="stylesheet"/>
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+</head>
+<body>
+<div id="wrapper">
+    <div th:replace="fragments/panel :: header">
+        Header
+    </div>
+    <div th:replace="fragments/panel :: menu">
+        Footer
+    </div>
+    <div id="page-wrapper">
+        <div th:include="this :: content"/>
+    </div>
+
+</div>
+
+<!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+<!-- JQUERY SCRIPTS -->
+<script src="panel/js/jquery-1.10.2.js"></script>
+<!-- BOOTSTRAP SCRIPTS -->
+<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+<!-- METISMENU SCRIPTS -->
+<script src="panel/js/jquery.metisMenu.js"></script>
+<!-- CUSTOM SCRIPTS -->
+<script src="panel/js/custom.js"></script>
+</body>
+</html>

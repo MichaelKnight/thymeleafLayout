@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Thymeleaf Layout</title>
+    <!-- BOOTSTRAP STYLES-->
+    <link href="bootstrap-3.3.6-dist/css/bootstrap.css" rel="stylesheet"/>
+    <!-- FONTAWESOME STYLES-->
+    <link href="font-awesome-4.5.0/css/font-awesome.css" rel="stylesheet"/>
+    <!-- CUSTOM STYLES-->
+    <link href="panel/css/custom.css" rel="stylesheet"/>
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+</head>
+<body>
+
+
+<div id="wrapper">
+    <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0" th:fragment="header">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">UserName</a>
+        </div>
+        <div style="color: white;
+padding: 15px 50px 5px 50px;
+float: right;
+font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#"
+                                                       class="btn btn-danger square-btn-adjust">Logout</a></div>
+    </nav>
+    <!-- /. NAV TOP  -->
+    <nav class="navbar-default navbar-side" role="navigation" th:fragment="menu">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="main-menu">
+
+                <li>
+
+                    <a href="#"><i class="fa fa-university fa-2x"></i><label th:text="#{companyBasicData}" style="font-weight: normal"></label><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="#"><label th:text="#{companies}" style="font-weight: normal"/></a>
+                        </li>
+                        <li>
+                            <a href="#"><label th:text="#{employees}" style="font-weight: normal"/></a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="/billing"><i class="fa fa-balance-scale fa-2x"></i> <label th:text="#{billing}" style="font-weight: normal"/></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-money  fa-2x"></i><label th:text="#{payrolls}" style="font-weight: normal"/></a>
+                </li>
+            </ul>
+
+        </div>
+
+    </nav>
+    <!-- /. NAV SIDE  -->
+    <!-- /. PAGE WRAPPER  -->
+</div>
+<!-- /. WRAPPER  -->
+<!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+<!-- JQUERY SCRIPTS -->
+<script src="panel/js/jquery-1.10.2.js"></script>
+<!-- BOOTSTRAP SCRIPTS -->
+<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+<!-- METISMENU SCRIPTS -->
+<script src="panel/js/jquery.metisMenu.js"></script>
+<!-- CUSTOM SCRIPTS -->
+<script src="panel/js/custom.js"></script>
+
+
+</body>
+</html>
