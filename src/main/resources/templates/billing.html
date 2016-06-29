@@ -1,34 +1,26 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" layout:decorator="layout/default">
 <head>
     <meta charset="utf-8"/>
     <title>Thymeleaf Layout</title>
 
 </head>
 <body onload="test()">
-<div th:replace="fragments/panel :: header">
+<div id="page-wrapper" layout:fragment="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header">BILLING</h3>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <script>
+        function test() {
+            alert("TEST");
+        }
+    </script>
 </div>
-<div th:replace="fragments/panel :: menu">
-</div>
-
-<div>
-    my page content
-</div>
-
-
-<script>
-    function test() {
-        alert("TEST");
-    }
-</script>
-<!-- JQUERY SCRIPTS -->
-<script src="panel/js/jquery-1.10.2.js"></script>
-<!-- BOOTSTRAP SCRIPTS -->
-<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
-<!-- METISMENU SCRIPTS -->
-<script src="panel/js/jquery.metisMenu.js"></script>
-<!-- CUSTOM SCRIPTS -->
-<script src="panel/js/custom.js"></script>
 </body>
 </html>
