@@ -1,0 +1,33 @@
+<div layout:fragment="sidebar">
+    <nav class="navbar-default navbar-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="main-menu">
+
+                <li>
+                    <a href="#"><i class="fa fa-university fa-2x"></i><label th:text="#{companyBasicData}"
+                                                                             style="font-weight: normal"></label><span
+                            class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="#"><label th:text="#{companies}" style="font-weight: normal"/></a>
+                        </li>
+                        <li>
+                            <a href="#"><label th:text="#{employees}" style="font-weight: normal"/></a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="/billing"><i class="fa fa-balance-scale fa-2x"></i> <label th:text="#{billing}"
+                                                                                        style="font-weight: normal"/></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-money  fa-2x"></i><label th:text="#{payrolls}"
+                                                                         style="font-weight: normal"/></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</div>
